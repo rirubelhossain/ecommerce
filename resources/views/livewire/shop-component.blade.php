@@ -237,13 +237,14 @@
 					</div>
 
 					<div class="wrap-pagination-info">
-						<ul class="page-numbers">
+                        {{$product->links()}}
+						<!-- <ul class="page-numbers">
 							<li><span class="page-number-item current" >1</span></li>
 							<li><a class="page-number-item" href="#" >2</a></li>
 							<li><a class="page-number-item" href="#" >3</a></li>
 							<li><a class="page-number-item" href="#" >4</a></li>
 							<li><a class="page-number-item next-link" href="#" >Next</a></li>
-						</ul>
+						</ul> -->
 						<p class="result-count">Showing 1-8 of 12 result</p>
 					</div>
 				</div><!--end main products area-->
