@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent ;
+use App\Http\Livewire\ContactComponent ;
 use App\Http\Livewire\CartComponent ;
 use App\Http\Livewire\ShopComponent ;
 use App\Http\Livewire\CheckoutComponent ;
+use App\Http\Livewire\AboutusComponent ;
 use App\Http\Livewire\User\UserDashboardComponent ;
 use App\Http\Livewire\Admin\AdminDashboardComponent ;
 
@@ -30,6 +32,8 @@ Route :: get('/', HomeComponent::class);
 Route :: get('cart/', CartComponent::class);
 Route :: get('checkout/', CheckoutComponent::class);
 Route :: get('shop/', ShopComponent::class);
+Route :: get('contact/', ContactComponent::class);
+Route :: get('aboutus/', AboutusComponent::class);
 
 /*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
