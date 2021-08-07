@@ -9,6 +9,7 @@ use App\Http\Livewire\CheckoutComponent ;
 use App\Http\Livewire\AboutusComponent ;
 use App\Http\Livewire\User\UserDashboardComponent ;
 use App\Http\Livewire\Admin\AdminDashboardComponent ;
+use App\Http\Livewire\DetailsComponent ;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route :: get('checkout/', CheckoutComponent::class);
 Route :: get('shop/', ShopComponent::class);
 Route :: get('contact/', ContactComponent::class);
 Route :: get('aboutus/', AboutusComponent::class);
+Route :: get('product/{slug}/', DetailsComponent::class)->name('product.details');
 
 /*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
