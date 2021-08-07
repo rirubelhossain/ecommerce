@@ -331,7 +331,7 @@
 										</div>
 									</div>
 									<div class="product-info">
-										<a href="#" class="product-name"><span>{{$r_product->name}}</span></a>
+										<a href="{{route('product.details',['slug'=>$r_product->slug])}}" class="product-name"><span>{{$r_product->name}}</span></a>
 										<div class="wrap-price"><span class="product-price">{{$r_product->regular_price}}</span></div>
 									</div>
 								</div>
