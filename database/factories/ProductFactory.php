@@ -36,7 +36,6 @@ class ProductFactory extends Factory
             'image' => 'digital_'.$this ->faker->unique()->numberBetween(1,22) . '.jpg' ,
             'category_id' => $this ->faker->numberBetween(1,5) 
 
-
         ];
     }
 }
