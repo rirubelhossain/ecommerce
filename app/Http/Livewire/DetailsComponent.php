@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 use App\Models\Product ;    
 use Livewire\Component;
-
+use Cart ;
 class DetailsComponent extends Component
 {   
     public $slug ;
@@ -11,6 +11,12 @@ class DetailsComponent extends Component
     public function mount($slug )
     {
         $this->slug = $slug ;
+    }
+    public function store($probuct_id , $product_name , $product_price)
+    {
+        Cart::add($probuct_id , $product_name , 1 , $product_price )->associate('App\Models\Product');
+        session()->flash('success_message' , 'Item added in Cart') ;
+        return redirect()->route('product.cart') ;
     }
     public function render()
     {   
