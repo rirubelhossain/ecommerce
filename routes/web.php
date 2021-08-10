@@ -10,6 +10,7 @@ use App\Http\Livewire\AboutusComponent ;
 use App\Http\Livewire\User\UserDashboardComponent ;
 use App\Http\Livewire\Admin\AdminDashboardComponent ;
 use App\Http\Livewire\DetailsComponent ;
+use App\Http\Livewire\CategoryComponent ;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,13 @@ Route::get('/', function () {
 */
 
 Route :: get('/', HomeComponent::class);
-Route :: get('cart/', CartComponent::class)->name('product.cart');
-Route :: get('checkout/', CheckoutComponent::class);
-Route :: get('shop/', ShopComponent::class);
-Route :: get('contact/', ContactComponent::class);
-Route :: get('aboutus/', AboutusComponent::class);
-Route :: get('product/{slug}/', DetailsComponent::class)->name('product.details');
+Route :: get('/cart', CartComponent::class)->name('product.cart');
+Route :: get('/checkout', CheckoutComponent::class);
+Route :: get('/shop', ShopComponent::class);
+Route :: get('/contact', ContactComponent::class);
+Route :: get('/aboutus', AboutusComponent::class);
+Route :: get('/product/{slug}', DetailsComponent::class)->name('product.details');
+Route :: get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
 
 /*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
