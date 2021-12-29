@@ -121,8 +121,8 @@
 						<div class="wrap-logo-top left-section">
 							<a href="index.html" class="link-to-home"><img src="{{asset('assets/images/logo-top-1.png')}}" alt="mercado"></a>
 						</div>
-
-						<div class="wrap-search center-section">
+						@livewire('header-search-component')
+						<!-- <div class="wrap-search center-section">
 							<div class="wrap-search-form">
 								<form action="#" id="form-search-top" name="form-search-top">
 									<input type="text" name="search" value="" placeholder="Search here...">
@@ -152,7 +152,7 @@
 									</div>
 								</form>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="wrap-icon right-section">
 							<div class="wrap-icon-section wishlist">
